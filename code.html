@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+
+<html class="light" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TechSupport - Painel Geral</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+                  "on-error-container": "#93000a",
+                  "surface-dim": "#d9dadb",
+                  "on-secondary-fixed": "#410004",
+                  "on-secondary-fixed-variant": "#930013",
+                  "primary-container": "#008742",
+                  "on-surface-variant": "#3e4a3f",
+                  "surface": "#f8f9fa",
+                  "inverse-on-surface": "#f0f1f2",
+                  "error-container": "#ffdad6",
+                  "primary-fixed": "#89faa5",
+                  "on-primary": "#ffffff",
+                  "tertiary": "#0055A4",
+                  "on-secondary-container": "#fffbff",
+                  "tertiary-container": "#3875c6",
+                  "tertiary-fixed-dim": "#a8c8ff",
+                  "inverse-surface": "#2e3132",
+                  "outline": "#6e7a6e",
+                  "on-secondary": "#ffffff",
+                  "secondary-container": "#dd2e33",
+                  "secondary": "#CE2B37",
+                  "surface-variant": "#e1e3e4",
+                  "on-primary-container": "#f6fff3",
+                  "secondary-fixed": "#ffdad7",
+                  "on-error": "#ffffff",
+                  "tertiary-fixed": "#d5e3ff",
+                  "on-primary-fixed": "#00210b",
+                  "primary-fixed-dim": "#6cdd8c",
+                  "surface-container-high": "#e7e8e9",
+                  "on-background": "#191c1d",
+                  "surface-container-low": "#f3f4f5",
+                  "on-tertiary-container": "#fefcff",
+                  "on-primary-fixed-variant": "#005226",
+                  "on-tertiary-fixed": "#001b3c",
+                  "surface-tint": "#006d34",
+                  "background": "#f8f9fa",
+                  "surface-container": "#edeeef",
+                  "outline-variant": "#bdcabc",
+                  "on-tertiary": "#ffffff",
+                  "on-tertiary-fixed-variant": "#004689",
+                  "surface-container-highest": "#e1e3e4",
+                  "surface-bright": "#f8f9fa",
+                  "primary": "#008c45",
+                  "surface-container-lowest": "#ffffff",
+                  "on-surface": "#191c1d",
+                  "secondary-fixed-dim": "#ffb3ad",
+                  "inverse-primary": "#6cdd8c",
+                  "error": "#ba1a1a"
+          },
+          "borderRadius": {
+                  "DEFAULT": "0.125rem",
+                  "lg": "0.25rem",
+                  "xl": "0.5rem",
+                  "full": "0.75rem"
+          },
+          "spacing": {
+                  "container-max": "1440px",
+                  "stack-sm": "0.5rem",
+                  "stack-lg": "2rem",
+                  "stack-md": "1rem",
+                  "gutter": "1.5rem",
+                  "margin-page": "2rem",
+                  "sidebar-width": "260px"
+          },
+          "fontFamily": {
+                  "body-lg": [
+                          "Inter"
+                  ],
+                  "body-md": [
+                          "Inter"
+                  ],
+                  "headline-md": [
+                          "Inter"
+                  ],
+                  "headline-xl": [
+                          "Inter"
+                  ],
+                  "mono-label": [
+                          "JetBrains Mono"
+                  ],
+                  "headline-lg": [
+                          "Inter"
+                  ],
+                  "label-md": [
+                          "Inter"
+                  ]
+          },
+          "fontSize": {
+                  "body-lg": [
+                          "16px",
+                          {
+                                  "lineHeight": "24px",
+                                  "fontWeight": "400"
+                          }
+                  ],
+                  "body-md": [
+                          "14px",
+                          {
+                                  "lineHeight": "20px",
+                                  "fontWeight": "400"
+                          }
+                  ],
+                  "headline-md": [
+                          "20px",
+                          {
+                                  "lineHeight": "28px",
+                                  "fontWeight": "600"
+                          }
+                  ],
+                  "headline-xl": [
+                          "36px",
+                          {
+                                  "lineHeight": "44px",
+                                  "letterSpacing": "-0.02em",
+                                  "fontWeight": "700"
+                          }
+                  ],
+                  "mono-label": [
+                          "13px",
+                          {
+                                  "lineHeight": "18px",
+                                  "fontWeight": "500"
+                          }
+                  ],
+                  "headline-lg": [
+                          "24px",
+                          {
+                                  "lineHeight": "32px",
+                                  "letterSpacing": "-0.01em",
+                                  "fontWeight": "600"
+                          }
+                  ],
+                  "label-md": [
+                          "12px",
+                          {
+                                  "lineHeight": "16px",
+                                  "letterSpacing": "0.05em",
+                                  "fontWeight": "600"
+                          }
+                  ]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    body {
+      background-color: #f8f9fa; /* surface */
+      color: #191c1d; /* on-surface */
+    }
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .material-symbols-outlined.filled {
+      font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+  </style>
+</head>
+<body class="font-body-md text-body-md antialiased flex">
+<!-- SideNavBar -->
+<aside class="bg-tertiary dark:bg-inverse-surface fixed left-0 top-0 h-full w-sidebar-width z-50 shadow-md flex flex-col hidden md:flex">
+<div class="px-gutter py-6 border-b border-white/10">
+<div class="flex items-center gap-stack-sm">
+<img alt="Mediterranean Tech Logo" class="w-8 h-8 rounded" data-alt="A clean, modern logo for a Mediterranean tech company. It features a stylized, abstract geometric shape in pure white, set against a deep navy blue background. The design is sharp, clinical, and tech-forward, embodying efficiency and professional reliability without any unnecessary embellishments." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAacE4yTsNlGsHfRtRDtZb54RI9ANjGG3QtH6A637LXkHGEu8kx4w_fg0DacMthMQTHFHMGirSX3JycjkH853x0_rf1-9ZF3gn_xlLNEj4p9XrNpuAHvAVcV0UexvVHO-BFmc1DsYaEvI4nS2rltb6pZBrpMK-cYOfHwO3IwwYqb7_7uX1xuom5WgihWSpsbbVIOgwgOzP_T45snIex9ZVrjiYDQLSYRU8F7zJbHgvg0ocI_1HK-dNXFHQorkhnKEN3JUnOYGI3AD-v"/>
+<div>
+<h1 class="font-headline-lg text-headline-lg font-bold text-on-tertiary dark:text-on-primary-fixed">TechSupport</h1>
+<p class="font-label-md text-label-md text-on-tertiary/70 uppercase">Enterprise Console</p>
+</div>
+</div>
+</div>
+<nav class="flex-1 py-4 flex flex-col gap-1 overflow-y-auto">
+<a class="flex items-center gap-stack-md px-gutter py-3 text-primary-fixed font-bold bg-primary-container/20 border-l-4 border-primary-fixed hover:bg-primary-container/10 hover:text-on-tertiary transition-all duration-200 active:scale-98 transform transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+        Dashboard
+      </a>
+<a class="flex items-center gap-stack-md px-gutter py-3 text-on-tertiary/70 dark:text-surface-variant hover:bg-primary-container/10 hover:text-on-tertiary transition-all duration-200 active:scale-98 transform transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="confirmation_number">confirmation_number</span>
+        My Tickets
+      </a>
+<a class="flex items-center gap-stack-md px-gutter py-3 text-on-tertiary/70 dark:text-surface-variant hover:bg-primary-container/10 hover:text-on-tertiary transition-all duration-200 active:scale-98 transform transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="bar_chart">bar_chart</span>
+        Reports
+      </a>
+<a class="flex items-center gap-stack-md px-gutter py-3 text-on-tertiary/70 dark:text-surface-variant hover:bg-primary-container/10 hover:text-on-tertiary transition-all duration-200 active:scale-98 transform transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="inventory_2">inventory_2</span>
+        Inventory
+      </a>
+<a class="flex items-center gap-stack-md px-gutter py-3 text-on-tertiary/70 dark:text-surface-variant hover:bg-primary-container/10 hover:text-on-tertiary transition-all duration-200 active:scale-98 transform transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+        Settings
+      </a>
+</nav>
+</aside>
+<!-- Main Content Area -->
+<div class="flex-1 ml-0 md:ml-sidebar-width flex flex-col min-h-screen">
+<!-- TopAppBar -->
+<header class="bg-surface dark:bg-surface-dim fixed top-0 right-0 w-full md:w-[calc(100%-260px)] z-40 border-b border-outline-variant/30 dark:border-outline-variant/10 shadow-sm dark:shadow-none flex items-center justify-between px-gutter h-16 transition-colors focus-within:ring-2 focus-within:ring-tertiary/20">
+<div class="flex items-center gap-stack-md w-full max-w-md">
+<!-- Search bar on left -->
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline">search</span>
+<input class="w-full bg-surface-container-low border border-outline-variant rounded-full py-2 pl-10 pr-4 font-body-md text-body-md text-on-surface focus:outline-none focus:border-tertiary focus:ring-1 focus:ring-tertiary transition-all" placeholder="Search..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-stack-md">
+<span class="font-headline-md text-headline-md font-extrabold text-primary dark:text-primary-fixed hidden lg:block">TechSupport Dashboard</span>
+<button class="p-2 text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-high dark:hover:bg-surface-container-highest rounded-full transition-colors relative">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+<span class="absolute top-1.5 right-1.5 w-2 h-2 bg-secondary rounded-full border border-surface"></span>
+</button>
+<button class="p-2 text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-high dark:hover:bg-surface-container-highest rounded-full transition-colors">
+<span class="material-symbols-outlined" data-icon="help_outline">help_outline</span>
+</button>
+<div class="h-8 w-8 rounded-full bg-tertiary-container overflow-hidden border border-outline-variant">
+<img alt="Support Lead Profile" class="w-full h-full object-cover" data-alt="A professional headshot of a mature corporate professional in a modern, brightly lit office environment. The lighting is soft and clinical, evoking a clean, tech-forward atmosphere. The subject is wearing a crisp business suit, embodying authority and reliability. The color palette emphasizes neutral tones with very subtle cool blue undertones, consistent with a modern enterprise aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDfvD47ZVLPaDd1oz7EsZdJ1M-tgz9O8PMoDGBQqyDfnqjpf9btEH8I_-EUP6vgGs91-H-9CL0iPkkibM50Ls5Y0VchAHfpwo75sDVYs4822D5aPmHqrYKH9aT4v3TRMVQ_iKciGlG_1RXiDzlDg1colaTZFwITKGcHqn715XXtDeoNJ9DXOx2zQ0Lzhi5hy6XF_x31oZ4AdvtOYtW8F2Txh_CZoMaKGUmqxGoQh3qk71jrIRJKUEo4Xh13HGopUEJpfwt8UGHpTcK"/>
+</div>
+</div>
+</header>
+<!-- Canvas -->
+<main class="flex-1 mt-16 p-gutter pb-margin-page overflow-x-hidden">
+<div class="max-w-container-max mx-auto space-y-stack-lg">
+<!-- Header Section -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-stack-md">
+<div>
+<h2 class="font-headline-xl text-headline-xl text-on-background">Painel Geral</h2>
+<p class="font-body-md text-body-md text-outline mt-1">Visão geral do sistema de suporte técnico.</p>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded hover:bg-primary-container transition-colors border border-primary/20 flex items-center gap-2 font-label-md text-label-md uppercase tracking-wider shadow-sm">
+<span class="material-symbols-outlined text-[18px]">add</span>
+            NOVO CHAMADO
+          </button>
+</div>
+<!-- Status Summary (Bento Grid Style) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-stack-md">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest p-5 rounded-xl border border-outline-variant/30 shadow-[0_4px_12px_rgba(0,0,0,0.02)] relative overflow-hidden group">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-tertiary"></div>
+<div class="flex justify-between items-start">
+<div>
+<p class="font-label-md text-label-md text-outline uppercase">Chamados Abertos</p>
+<h3 class="font-headline-xl text-headline-xl text-on-surface mt-2">124</h3>
+</div>
+<div class="p-2 bg-tertiary-container/10 text-tertiary rounded-lg">
+<span class="material-symbols-outlined filled">inbox</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-outline mt-4 flex items-center gap-1 text-sm">
+<span class="material-symbols-outlined text-[16px] text-primary">trending_up</span>
+              +12 desde ontem
+            </p>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest p-5 rounded-xl border border-outline-variant/30 shadow-[0_4px_12px_rgba(0,0,0,0.02)] relative overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-primary"></div>
+<div class="flex justify-between items-start">
+<div>
+<p class="font-label-md text-label-md text-outline uppercase">Em Atendimento</p>
+<h3 class="font-headline-xl text-headline-xl text-on-surface mt-2">45</h3>
+</div>
+<div class="p-2 bg-primary-container/10 text-primary rounded-lg">
+<span class="material-symbols-outlined filled">engineering</span>
+</div>
+</div>
+<div class="mt-4 w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[65%]"></div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest p-5 rounded-xl border border-outline-variant/30 shadow-[0_4px_12px_rgba(0,0,0,0.02)] relative overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-[#F59E0B]"></div> <!-- Warning color -->
+<div class="flex justify-between items-start">
+<div>
+<p class="font-label-md text-label-md text-outline uppercase">Aguardando Peças</p>
+<h3 class="font-headline-xl text-headline-xl text-on-surface mt-2">18</h3>
+</div>
+<div class="p-2 bg-[#F59E0B]/10 text-[#F59E0B] rounded-lg">
+<span class="material-symbols-outlined filled">inventory</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-outline mt-4 text-sm">
+              5 críticas aguardando &gt; 48h
+            </p>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface-container-lowest p-5 rounded-xl border border-outline-variant/30 shadow-[0_4px_12px_rgba(0,0,0,0.02)] relative overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-outline"></div>
+<div class="flex justify-between items-start">
+<div>
+<p class="font-label-md text-label-md text-outline uppercase">Concluídos Hoje</p>
+<h3 class="font-headline-xl text-headline-xl text-on-surface mt-2">32</h3>
+</div>
+<div class="p-2 bg-surface-container-high text-outline rounded-lg">
+<span class="material-symbols-outlined filled">task_alt</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-outline mt-4 flex items-center gap-1 text-sm">
+<span class="material-symbols-outlined text-[16px] text-tertiary">schedule</span>
+              Tempo médio: 2h 15m
+            </p>
+</div>
+</div>
+<!-- Main Workspace Area -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 shadow-[0_4px_12px_rgba(0,0,0,0.02)] overflow-hidden">
+<!-- Category Filters -->
+<div class="p-4 border-b border-outline-variant/30 bg-surface-bright flex items-center gap-3 overflow-x-auto no-scrollbar">
+<span class="font-label-md text-label-md text-outline uppercase shrink-0 mr-2">Filtros:</span>
+<button class="shrink-0 px-4 py-1.5 rounded-full bg-tertiary/10 text-tertiary font-mono-label text-mono-label border border-tertiary/20 hover:bg-tertiary/20 transition-colors">
+              Informática/TI
+            </button>
+<button class="shrink-0 px-4 py-1.5 rounded-full bg-surface-container-high text-on-surface-variant font-mono-label text-mono-label border border-outline-variant hover:bg-surface-container-highest transition-colors">
+              Elétrica
+            </button>
+<button class="shrink-0 px-4 py-1.5 rounded-full bg-surface-container-high text-on-surface-variant font-mono-label text-mono-label border border-outline-variant hover:bg-surface-container-highest transition-colors">
+              Predial/Civil
+            </button>
+<button class="shrink-0 px-4 py-1.5 rounded-full bg-surface-container-high text-on-surface-variant font-mono-label text-mono-label border border-outline-variant hover:bg-surface-container-highest transition-colors">
+              Segurança Eletrônica
+            </button>
+<button class="shrink-0 px-4 py-1.5 rounded-full bg-surface-container-high text-on-surface-variant font-mono-label text-mono-label border border-outline-variant hover:bg-surface-container-highest transition-colors">
+              Telecomunicações
+            </button>
+</div>
+<!-- Ticket Management Table -->
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low border-b border-outline-variant/30">
+<th class="p-4 font-label-md text-label-md text-outline uppercase">ID/Ticket</th>
+<th class="p-4 font-label-md text-label-md text-outline uppercase">Assunto</th>
+<th class="p-4 font-label-md text-label-md text-outline uppercase">Categoria</th>
+<th class="p-4 font-label-md text-label-md text-outline uppercase">Prioridade</th>
+<th class="p-4 font-label-md text-label-md text-outline uppercase">Status</th>
+<th class="p-4 font-label-md text-label-md text-outline uppercase text-right">Ações</th>
+</tr>
+</thead>
+<tbody class="font-body-md text-body-md text-on-surface">
+<!-- Row 1 -->
+<tr class="border-b border-outline-variant/10 hover:bg-surface-container-low/50 transition-colors group">
+<td class="p-4 font-mono-label text-mono-label text-tertiary">#TK-8901</td>
+<td class="p-4 font-headline-md text-[15px] font-semibold">Falha no servidor de arquivos principal</td>
+<td class="p-4">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-tertiary/10 text-tertiary">Informática/TI</span>
+</td>
+<td class="p-4">
+<div class="flex items-center gap-1.5">
+<div class="w-2 h-2 rounded-full bg-secondary"></div>
+<span class="text-secondary font-medium text-sm">Crítica</span>
+</div>
+</td>
+<td class="p-4">
+<span class="inline-flex items-center px-2 py-1 rounded bg-surface-container-high border border-outline-variant text-on-surface-variant text-xs">Pendente</span>
+</td>
+<td class="p-4 text-right">
+<div class="flex items-center justify-end gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-1.5 text-primary hover:bg-primary/10 rounded transition-colors" title="Atribuir Técnico">
+<span class="material-symbols-outlined text-[20px]">person_add</span>
+</button>
+<button class="p-1.5 text-tertiary hover:bg-tertiary/10 rounded transition-colors" title="Visualizar Detalhes">
+<span class="material-symbols-outlined text-[20px]">visibility</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="border-b border-outline-variant/10 hover:bg-surface-container-low/50 transition-colors group">
+<td class="p-4 font-mono-label text-mono-label text-tertiary">#TK-8895</td>
+<td class="p-4 font-headline-md text-[15px] font-semibold">Queda de energia no setor B</td>
+<td class="p-4">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-[#F59E0B]/10 text-[#F59E0B]">Elétrica</span>
+</td>
+<td class="p-4">
+<div class="flex items-center gap-1.5">
+<div class="w-2 h-2 rounded-full bg-[#EA580C]"></div> <!-- Alta -->
+<span class="text-[#EA580C] font-medium text-sm">Alta</span>
+</div>
+</td>
+<td class="p-4">
+<span class="inline-flex items-center px-2 py-1 rounded bg-primary/10 border border-primary/20 text-primary font-medium text-xs">Em Progresso</span>
+</td>
+<td class="p-4 text-right">
+<div class="flex items-center justify-end gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-1.5 text-primary hover:bg-primary/10 rounded transition-colors" title="Atribuir Técnico">
+<span class="material-symbols-outlined text-[20px]">person_add</span>
+</button>
+<button class="p-1.5 text-tertiary hover:bg-tertiary/10 rounded transition-colors" title="Visualizar Detalhes">
+<span class="material-symbols-outlined text-[20px]">visibility</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="border-b border-outline-variant/10 hover:bg-surface-container-low/50 transition-colors group">
+<td class="p-4 font-mono-label text-mono-label text-tertiary">#TK-8882</td>
+<td class="p-4 font-headline-md text-[15px] font-semibold">Atualização de licenças Office</td>
+<td class="p-4">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-tertiary/10 text-tertiary">Informática/TI</span>
+</td>
+<td class="p-4">
+<div class="flex items-center gap-1.5">
+<div class="w-2 h-2 rounded-full bg-outline"></div> <!-- Baixa -->
+<span class="text-outline font-medium text-sm">Baixa</span>
+</div>
+</td>
+<td class="p-4">
+<span class="inline-flex items-center px-2 py-1 rounded bg-tertiary/10 border border-tertiary/20 text-tertiary font-medium text-xs">Validando</span>
+</td>
+<td class="p-4 text-right">
+<div class="flex items-center justify-end gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-1.5 text-primary hover:bg-primary/10 rounded transition-colors" title="Atribuir Técnico">
+<span class="material-symbols-outlined text-[20px]">person_add</span>
+</button>
+<button class="p-1.5 text-tertiary hover:bg-tertiary/10 rounded transition-colors" title="Visualizar Detalhes">
+<span class="material-symbols-outlined text-[20px]">visibility</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="p-4 border-t border-outline-variant/30 bg-surface-bright flex justify-center">
+<button class="font-label-md text-label-md text-tertiary hover:underline uppercase tracking-wider">Ver Todos os Chamados</button>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>
